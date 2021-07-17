@@ -1,0 +1,31 @@
+import java.util.Scanner;  // Import the Scanner class
+ 
+public class Salary {
+ 
+    public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    System.out.println("Enter your Basic Salary");
+    double basicSalary = myObj.nextDouble();  // Read user BasicSalary
+    System.out.println("BasicSalary is: " + basicSalary);  
+	
+	double hra, da, fixedHra, grossSalary;
+	
+	if (basicSalary >= 1500) //Condition Check
+	{
+		da = basicSalary * 0.98;
+		hra = 500;
+		System.out.println("GrossSalary is:" + (basicSalary + hra + da )); // Output user input
+		
+	}
+	
+	else {
+		
+		hra = basicSalary * 0.10;
+		da = basicSalary * 0.90;
+		System.out.println("GrossSalary is:" + (basicSalary + hra + da )); // Output user input
+	}
+	
+	}
+}
+
+	
